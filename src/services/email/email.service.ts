@@ -42,7 +42,7 @@ export class EmailService {
         { ...object }
       );
     } else {
-      return renderFile(join(__dirname, `/templates/${template}.email.pug`), {
+      return renderFile(join(__dirname, "../../../src/services/email", `/templates/${template}.email.pug`), {
         ...object
       });
     }
