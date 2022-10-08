@@ -44,6 +44,15 @@ class EnvValidations {
   @IsNumber()
   EMAIL_PORT: number;
 
+  @IsString()
+  TWILIO_ACCOUNT_SID: string;
+
+  @IsString()
+  TWILIO_AUTH_TOKEN: string;
+  
+  @IsString()
+  TWILIO_PHONE: string;
+
 }
 
 export const validate = (config: Record<string, unknown>) => {
