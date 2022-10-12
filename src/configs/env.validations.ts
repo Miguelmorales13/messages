@@ -49,10 +49,30 @@ class EnvValidations {
 
   @IsString()
   TWILIO_AUTH_TOKEN: string;
-  
+
   @IsString()
   TWILIO_PHONE: string;
 
+  @IsString()
+  FIRE_TYPE: string;
+  @IsString()
+  FIRE_PROJECT_ID: string;
+  @IsString()
+  FIRE_PRIVATE_KEY_ID: string;
+  @IsString()
+  FIRE_PRIVATE_KEY: string;
+  @IsString()
+  FIRE_CLIENT_EMAIL: string;
+  @IsString()
+  FIRE_CLIENT_ID: string;
+  @IsString()
+  FIRE_AUTH_URI: string;
+  @IsString()
+  FIRE_TOKEN_URI: string;
+  @IsString()
+  FIRE_AUTH_PROVIDER_X509_CERT_URL: string;
+  @IsString()
+  FIRE_CLIENT_X509_CERT_URL: string;
 }
 
 export const validate = (config: Record<string, unknown>) => {

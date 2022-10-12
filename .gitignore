@@ -2,6 +2,7 @@
 /dist
 /node_modules
 .env
+key-direbase.json
 # Logs
 logs
 *.log
