@@ -1,7 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import * as admin from "firebase-admin";
 import { join } from "path";
-import { GetEnv } from "../../configs/env.validations";
 import { SendFireMessageDto } from "../../models/firebase/send-fire-message.dto";
 import { SendMultiplesFireMessageDto } from "../../models/firebase/send-multiples-fire-message.dto";
 
@@ -9,7 +8,7 @@ import { SendMultiplesFireMessageDto } from "../../models/firebase/send-multiple
 export class FirebaseMessagesService {
 
   constructor() {
-    const serviceAccount = require(join(__dirname, "..", "..", GetEnv("NODE_ENV") == "production" ? "" : "..", "key-direbase.json"));
+    const serviceAccount = require(join(__dirname, "..", "..", "..", "key-direbase.json"));
 
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount)
